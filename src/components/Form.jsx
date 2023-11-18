@@ -13,16 +13,17 @@ function Form(props){
     setName(e.target.value)
    }
 
-   const handleFormSubmit = (e) =>{
+   const handleURLChange = (e) =>{
+    setUrl(e.target.value)
+   }
+
+   const submitForm = (e) =>{
     e.preventDefault()
-    // alert(name)
-    console.log(name)
-    props.onNewData(name)
-    // const newLinkData = {name: name}
-    // handleSubmit(newLinkData)
+    const newLinkData = {name:name, url:url}
+    props.onNewData(newLinkData)
    }
     return (
-        <form onSubmit={handleFormSubmit}>
+        <form onSubmit={submitForm}>
             <label htmlFor="linkName">Link name:</label>
             <input 
             type="text" 
@@ -33,14 +34,14 @@ function Form(props){
             />
             <br/>
             <br/>
-            {/* <label htmlFor="URL">URL:</label>
+            <label htmlFor="URL">URL:</label>
             <input 
             type="text" 
             id="linkURL" 
             name="linkURL"
-            value={URL}
-            onChange={(e) => setURL(e.target.value)}
-            /> */}
+            value={url}
+            onChange={handleURLChange}
+            />
             <br/>
             <br/>
             <input type="submit" value="Submit"/>

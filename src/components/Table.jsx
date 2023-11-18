@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
-
+import {Link} from "react-router-dom"
 
 function TableHeader(){
     /* responsible for rendering the head of our table with the appropriate columns*/
@@ -18,28 +18,28 @@ function TableHeader(){
 const TableBody = (props) => {
     // boilerplate table body functional component
     // we use Array.map to create table rows from LinkData passed via props
-    console.log(props.linkData)
-    
+    // console.log(props.linkData)
+    const rows = props.linkData.map((row, index) =>{
     return(
-        <tbody>
-            {
-                props.linkData.map((data, index)=>{
-                    return <tr key={index}>
-                        <td>{data}</td>
-                    </tr>
-                })
-            }
-        </tbody>
-    )
+                <tr key={index}>
+                        <td>{row.name}</td>
+                        <td><a href={row.url}>{row.url}</a></td>
+                        <td>
+                            <button onClick={() => props.removeLink(index)}>Remove</button>
+                        </td>
+                </tr>
+    )    
+    })
+    return <tbody>{rows}</tbody>
+    
     // return <tbody>{rows}</tbody>
   }
 
 function Table(props){
-    // console.log(props.linkData)
     return (
         <table>
              <TableHeader/>
-             <TableBody linkData={props.linkData}/>
+             <TableBody linkData={props.linkData} removeLink={props.removeLink}/>
         </table>
     )
 }
