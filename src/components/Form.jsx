@@ -4,32 +4,43 @@
 import { useState } from "react"
 
 
-function Form(){
+function Form(props){
 
-   const [names, setNames] = useState("")
-   const [URL, setURL] = useState("")
+   const [name, setName] = useState("")
+   const [url, setUrl] = useState("")
 
+   const handleNameChange = (e) =>{
+    setName(e.target.value)
+   }
 
+   const handleFormSubmit = (e) =>{
+    e.preventDefault()
+    // alert(name)
+    console.log(name)
+    props.onNewData(name)
+    // const newLinkData = {name: name}
+    // handleSubmit(newLinkData)
+   }
     return (
-        <form>
+        <form onSubmit={handleFormSubmit}>
             <label htmlFor="linkName">Link name:</label>
             <input 
             type="text" 
             id="linkName" 
             name="linkName"
-            value={names}
-            onChange={(e) => setNames(e.target.value)}
+            value={name}
+            onChange={handleNameChange}
             />
             <br/>
             <br/>
-            <label htmlFor="URL">URL:</label>
+            {/* <label htmlFor="URL">URL:</label>
             <input 
             type="text" 
             id="linkURL" 
             name="linkURL"
             value={URL}
             onChange={(e) => setURL(e.target.value)}
-            />
+            /> */}
             <br/>
             <br/>
             <input type="submit" value="Submit"/>

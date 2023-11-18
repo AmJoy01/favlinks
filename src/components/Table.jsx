@@ -1,8 +1,6 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 
-import { useState } from "react"
-
 
 function TableHeader(){
     /* responsible for rendering the head of our table with the appropriate columns*/
@@ -17,24 +15,31 @@ function TableHeader(){
     )
 }
 
-function TableBody(){
+const TableBody = (props) => {
     // boilerplate table body functional component
     // we use Array.map to create table rows from LinkData passed via props
- 
-  
-    return (
-    <tbody>
-      
-    </tbody>
+    console.log(props.linkData)
+    
+    return(
+        <tbody>
+            {
+                props.linkData.map((data, index)=>{
+                    return <tr key={index}>
+                        <td>{data}</td>
+                    </tr>
+                })
+            }
+        </tbody>
     )
+    // return <tbody>{rows}</tbody>
   }
 
-function Table(){
-   
+function Table(props){
+    // console.log(props.linkData)
     return (
         <table>
              <TableHeader/>
-             <TableBody/>
+             <TableBody linkData={props.linkData}/>
         </table>
     )
 }
