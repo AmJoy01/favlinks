@@ -23,11 +23,11 @@ Currently, two official plugins are available:
 - [x] Create a removeLink function in the LinkContainer class that updates the state and removes an item from favLinks
 - [x] Create a prop called removeLink that passes your removeLink function to your Table component
 - [x] Create a button in your TableBody with an onClick that calls this.props.removeLink and passes the index of the table row
-- [ ] Create a Form component in your Form.jsx file with inputs and labels for name and URL
-- [ ] Set the initial state of the Form to be an object with empty properties for a link name and URL
-- [ ] Update the state of the Form every time the name or URL field is changed
-- [ ] Render the Form component below the Table component in your LinkContainer
+- [x] Create a Form component in your Form.jsx file with inputs and labels for name and URL
+- [x] Set the initial state of the Form to be an object with empty properties for a link name and URL
+- [x] Update the state of the Form every time the name or URL field is changed
+- [x] Render the Form component below the Table component in your LinkContainer
 - [x] Create a function called handleSubmit on the LinkContainer to update the state of this.state.favLinks and add new favLink from Form
 - [x] Add the handleSubmit as a parameter to your Form component
-- [ ] Create a method called submitForm that calls the handleSubmit and passes the Form data and resets the state of the Form values to be empty
-- [ ] Add a submit button to the Form that calls submitForm in its onClick parameter
+- [x] Create a method called submitForm that calls the handleSubmit and passes the Form data and resets the state of the Form values to be empty
+- [x] Add a submit button to the Form that calls submitForm in its onClick parameter

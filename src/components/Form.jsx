@@ -21,6 +21,8 @@ function Form(props){
     e.preventDefault()
     const newLinkData = {name:name, url:url}
     props.onNewData(newLinkData)
+    setName("")
+    setUrl("")
    }
     return (
         <form onSubmit={submitForm}>

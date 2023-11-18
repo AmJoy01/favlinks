@@ -1,6 +1,5 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
-import {Link} from "react-router-dom"
 
 function TableHeader(){
     /* responsible for rendering the head of our table with the appropriate columns*/
