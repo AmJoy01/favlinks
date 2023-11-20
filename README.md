@@ -9,6 +9,12 @@ Currently, two official plugins are available:
 
 # FavLinks Project
 
+### Here's a video:
+![favlinks](https://github.com/AmJoy01/favlinks/assets/93353341/9813d21c-14ef-40a5-8b96-a2f61a13594f)
+
+https://github.com/AmJoy01/favlinks/assets/93353341/6d0571c2-811b-4540-83fd-40880947ee6e
+
+
 ### Here are the steps:
 
 - [x] Look through the App.jsx
@@ -31,3 +37,4 @@ Currently, two official plugins are available:
 - [x] Add the handleSubmit as a parameter to your Form component
 - [x] Create a method called submitForm that calls the handleSubmit and passes the Form data and resets the state of the Form values to be empty
 - [x] Add a submit button to the Form that calls submitForm in its onClick parameter
+
