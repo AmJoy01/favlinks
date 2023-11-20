@@ -8,7 +8,7 @@ function TableHeader(){
         <tr>
             <th>Name</th>
             <th>URL</th>
-            <th>Remove</th>
+            <th>Delete</th>
         </tr>
     </thead>
     )
@@ -24,7 +24,7 @@ const TableBody = (props) => {
                         <td>{row.name}</td>
                         <td><a href={row.url}>{row.url}</a></td>
                         <td>
-                            <button onClick={() => props.removeLink(index)}>Remove</button>
+                            <button className="button" onClick={() => props.removeLink(index)}>Delete</button>
                         </td>
                 </tr>
     )    

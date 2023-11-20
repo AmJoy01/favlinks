@@ -26,8 +26,9 @@ function Form(props){
    }
     return (
         <form onSubmit={submitForm}>
-            <label htmlFor="linkName">Link name:</label>
+            <label htmlFor="linkName">Name</label>
             <input 
+            className="input"
             type="text" 
             id="linkName" 
             name="linkName"
@@ -36,8 +37,9 @@ function Form(props){
             />
             <br/>
             <br/>
-            <label htmlFor="URL">URL:</label>
+            <label htmlFor="URL">URL</label>
             <input 
+            className="input"
             type="text" 
             id="linkURL" 
             name="linkURL"
@@ -45,8 +47,7 @@ function Form(props){
             onChange={handleURLChange}
             />
             <br/>
-            <br/>
-            <input type="submit" value="Submit"/>
+            <input className="button" type="submit" value="Submit"/>
         </form>
     )
 }

@@ -9,6 +9,7 @@ function LinkContainer(){
 useEffect(()=>{
     const storedData = JSON.parse(localStorage.getItem(linkData))
     if(storedData)  setLinkData(storedData)
+// eslint-disable-next-line react-hooks/exhaustive-deps
 }, [])
 
     const handleRemove = (index) => {
