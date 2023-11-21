@@ -7,7 +7,7 @@ function LinkContainer(){
     const [linkData, setLinkData] = useState([])
 
 useEffect(()=>{
-    const storedData = JSON.parse(localStorage.getItem(linkData))
+    const storedData = JSON.parse(localStorage.getItem("linkData"))
     if(storedData)  setLinkData(storedData)
 // eslint-disable-next-line react-hooks/exhaustive-deps
 }, [])
@@ -19,7 +19,7 @@ useEffect(()=>{
            const updatedLinkData = [...linkData]
            updatedLinkData.splice(index, 1)
            setLinkData(updatedLinkData)
-            localStorage.setItem(linkData, JSON.stringify(updatedLinkData))
+            localStorage.setItem("linkData", JSON.stringify(updatedLinkData))
       }
     
       const handleSubmit = (newData) => {
@@ -28,7 +28,7 @@ useEffect(()=>{
             */
         const newLinkData = [...linkData, newData]
         setLinkData(newLinkData)   
-        localStorage.setItem(linkData, JSON.stringify(newLinkData))
+        localStorage.setItem("linkData", JSON.stringify(newLinkData))
         
       }
 
